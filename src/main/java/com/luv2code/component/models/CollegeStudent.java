@@ -1,7 +1,8 @@
 package com.luv2code.component.models;
 
 public class CollegeStudent implements Student {
-    private String firstname;
+    private int id;
+	private String firstname;
     private String lastname;
     private String emailAddress;
     private StudentGrades studentGrades;
@@ -66,4 +67,19 @@ public class CollegeStudent implements Student {
     public String getFullName() {
         return getFirstname() + " " + getLastname();
     }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	private String getFirstNameAndId()
+	{
+		return getFirstname() + " " + getId();
+	}
+    
+    
 }
